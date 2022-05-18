@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <title>Issac Lopez.</title>
+</head>
+
+<body class="light" id="top">
+  <header class="header center">
+    <h3>
+      <a href="" class="link">IL.</a>
+    </h3>
+
+    <nav class="nav center">
+      <ul class="nav__list center">
+        <li class="nav__list-item">
+          <a class="link link--nav" href="#projects">Projects</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="link link--nav" href="#skills">Skills</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="link link--nav" href="#contact">Contact</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="link link--nav" href="#blog">Blog</a>
+        </li>
+        <li class="nav__list-item"><a href="https://drive.google.com/file/d/1nbRGjYij0mW7PmWpveeeNZkRFWYAIwQX/view"
+            target="_blank" rel="noopener noreferrer">
+            <span class="btn btn--outline">Resume</span>
+          </a>
+        </li>
+      </ul>
+
+      <button type="button" aria-label="toggle theme" class="btn btn--icon">
+        <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+      </button>
+
+      <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
+        <i aria-hidden="true" class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About Section -->
+    <div class="about">
+      <h3 class="about__intro">Hi, my name is</h3>
+      <h1><span class="about__name">Issac Lopez.</span></h1>
+      <h1 class="about__role">I build things using my laptop.</h1>
+      <p class="about__desc">
+        I am a software engineer with interests in building superb digital experiences, full stack development,
+        and information technology. Currently, I am focused on obtaining a Bachelors of Science in Computer Science
+        whilst minoring in Mathematics at
+        <a href="" class="link" target="_blank" rel="noreferrer">Metropolitan State Univeristy of Denver</a>.
+      </p>
+
+      <div class="about__contact center">
+        <a href="https://github.com/Issac-Lopez" aria-label="github" class="link link--icon">
+          <i aria-hidden="true" class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/issac-lopez" aria-label="linkedin" class="link link--icon">
+          <i aria-hidden="true" class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com" aria-label="linkedin" class="link link--icon">
+          <i aria-hidden="true" class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.twitter.com" aria-label="linkedin" class="link link--icon">
+          <i aria-hidden="true" class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Projects section-->
+    <section id="projects" class="section projects">
+      <h2 class="section__title">Projects</h2>
+
+      <div class="projects__grid">
+        <div class="project">
+          <h3>Image Manipulation</h3>
+          <p class="project__description">
+            To create an application which is able to modify images as well as create new images using 2D Arrays.
+            (Addition of GUI in progress...)
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">Java</li>
+            <li class="project__stack-item">Swing</li>
+          </ul>
+
+          <a href="https://github.com/Issac-Lopez/ImageManipulationProject" aria-label="source code"
+            class="link link--icon">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a href="https://example.com" aria-label="live preview" class="link link--icon">
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
+        <div class="project">
+          <h3>Efficient Sorting Algorithms</h3>
+          <p class="project__description">
+            Visualization of different sorting algorithms to demonstrate how they work.
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">Java</li>
+            <li class="project__stack-item">Swing</li>
+          </ul>
+
+          <a href="https://github.com" aria-label="source code" class="link link--icon">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a href="https://example.com" aria-label="live preview" class="link link--icon">
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
+        <div class="project">
+          <h3>Inventory Management</h3>
+          <p class="project__description">
+            Ipsum accusamus ea excepturi aliquid eligendi amet. Explicabo
+            sapiente debitis labore sed ipsam Mollitia repellat illum quod
+            unde beatae Quis
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">MongDB</li>
+            <li class="project__stack-item">Express</li>
+            <li class="project__stack-item">React</li>
+            <li class="project__stack-item">Node</li>
+          </ul>
+
+          <a href="https://github.com" aria-label="source code" class="link link--icon">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a href="https://example.com" aria-label="live preview" class="link link--icon">
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
+        <div class="project">
+          <h3>Learning Java</h3>
+          <p class="project__description">
+            A repository of practice projects to help beginers who would like to learn about Java
+            through example projects and the basics to OOP.
+
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">Java</li>
+          </ul>
+
+          <a href="https://github.com/Issac-Lopez/javaPractice" aria-label="source code" class="link link--icon">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a href="https://example.com" aria-label="live preview" class="link link--icon">
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+
+        <div class="project">
+          <h3>Secure Password Generator</h3>
+          <p class="project__description">
+            Random password is generetated securely using JS. Currently being reimplemented in multiple other languages.
+          </p>
+          <ul class="project__stack">
+            <li class="project__stack-item">HTML</li>
+            <li class="project__stack-item">JavaScript</li>
+            <li class="project__stack-item">CSS</li>
+          </ul>
+
+          <a href="https://github.com/Issac-Lopez/PassWord-Generator-JS" aria-label="source code"
+            class="link link--icon">
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <a href="https://example.com" aria-label="live preview" class="link link--icon">
+            <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills section-->
+    <section class="section skills" id="skills">
+      <h2 class="section__title">Skills</h2>
+      <ul class="skills__list">
+        <li class="skills__list-item btn btn--plain">HTML</li>
+        <li class="skills__list-item btn btn--plain">CSS</li>
+        <li class="skills__list-item btn btn--plain">JavaScript</li>
+        <li class="skills__list-item btn btn--plain">React</li>
+        <li class="skills__list-item btn btn--plain">Node.js</li>
+        <li class="skills__list-item btn btn--plain">Git</li>
+        <li class="skills__list-item btn btn--plain">Bootstrap</li>
+        <li class="skills__list-item btn btn--plain">Gimp</li>
+        <li class="skills__list-item btn btn--plain">Java</li>
+        <li class="skills__list-item btn btn--plain">Python</li>
+        <li class="skills__list-item btn btn--plain">MySQL</li>
+        <li class="skills__list-item btn btn--plain">Agile Methodology</li>
+        <li class="skills__list-item btn btn--plain">Waterfall Methodology</li>
+        <li class="skills__list-item btn btn--plain">Rest API Development</li>
+        <li class="skills__list-item btn btn--plain">Notion</li>
+        <li class="skills__list-item btn btn--plain">Android Development</li>
+      </ul>
+    </section>
+
+    <!-- Contact section -->
+    <section class="section contact center" id="contact">
+      <h2 class="section__title">Get In Touch</h2>
+      <p class="contact__p">I am currently looky for any new opportunities.
+        If you have any questions or just want to say hi,
+        my inbox is always open an I will respond when I get the chance to!</p>
+      <a href="mailto:lopezissaca@gmail.com">
+        <span class="btn btn--outline">Say Hello</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="https://github.com/Issac-Lopez" class="link footer__link">
+      Designed & Built by Issac Lopez
+    </a>
+  </footer>
+
+  <div class="scroll-container">
+    <div class="scroll-top">
+      <a aria-label="Scroll up" href="#top">
+        <i aria-hidden="true" class="fas fa-arrow-up"></i>
+      </a>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
