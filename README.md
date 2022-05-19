@@ -6,6 +6,7 @@
 - scroll-behavior alternative using js: https://stackoverflow.com/questions/51229742/javascript-window-scroll-behavior-smooth-not-working-in-safari
 - Travel Adventure API and Game logic to github
   - add read me to java practice
+- links in text for website resources
 
 ## License
 
