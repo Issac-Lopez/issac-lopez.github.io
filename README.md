@@ -7,6 +7,7 @@
 - Travel Adventure API and Game logic to github
   - add read me to java practice
 - links in text for website resources
+- revise blog posts and publish
 
 ## License
 
