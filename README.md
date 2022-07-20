@@ -7,11 +7,14 @@
 - add more to each section (i.e, pictures, more text)
 - comments for js code
 - add links for resources used
+- custom favicon for the tab in browser
+
 ## In progress:
 - update projects when needed --> add a see all that links to github
 - revise/write blog posts and publish
 - optimize to get best overall score in lighthouse for mobile and desktop
 - make page more dynamic
+
 ## Completed:
 - overall ui
 - day-night mode and colros for themes 
