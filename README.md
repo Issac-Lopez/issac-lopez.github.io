@@ -24,6 +24,10 @@
 - intro section
 - menu items
 
+## Resources:
+- https://rajshekhar26.github.io/cleanfolio/
+- 
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
