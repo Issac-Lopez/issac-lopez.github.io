@@ -1,5 +1,5 @@
 using ModelContextProtocol.Client;
-using ModelContextProtocol.Protocol.Types;
+using ModelContextProtocol.Protocol;
 
 namespace McpClientDemo;
 

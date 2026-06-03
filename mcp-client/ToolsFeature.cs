@@ -1,4 +1,5 @@
 using ModelContextProtocol.Client;
+using ModelContextProtocol.Protocol;
 
 namespace McpClientDemo;
 
@@ -30,13 +31,13 @@ static class ToolsFeature
 
         var args = ReadArguments();
 
-        var response = await client.CallToolAsync(name, args, ct);
+        var result = await client.CallToolAsync(name, args, cancellationToken: ct);
 
-        Console.WriteLine(response.IsError ? "[error response]" : "[success]");
-        foreach (var content in response.Content)
+        Console.WriteLine(result.IsError ? "[error response]" : "[success]");
+        foreach (var content in result.Content)
         {
-            if (content.Text is { } text)
-                Console.WriteLine(text);
+            if (content is TextContentBlock tb)
+                Console.WriteLine(tb.Text);
         }
     }
 

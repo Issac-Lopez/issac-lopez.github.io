@@ -1,51 +1,50 @@
-using ModelContextProtocol.Protocol.Types;
+using ModelContextProtocol.Client;
+using ModelContextProtocol.Protocol;
 
 namespace McpClientDemo;
 
 // Sampling is a server→client capability: the MCP server asks the client
 // to perform an LLM inference and return the result.
 //
-// To enable it, pass a sampling handler when creating the client:
+// Wire it up when building McpClientOptions:
 //
 //   var options = new McpClientOptions
 //   {
 //       ClientInfo = ...,
-//       Capabilities = new ClientCapabilities
-//       {
-//           Sampling = new SamplingCapability(),
-//       },
+//       Capabilities = new() { Sampling = new() },
+//       Handlers = new() { SamplingHandler = SamplingFeature.HandleAsync },
 //   };
-//
-// Then register a handler on the underlying server (how to do this depends
-// on the SDK version — see McpClientFactory overloads or IMcpClient.SetSamplingHandler).
 
 static class SamplingFeature
 {
-    // Example handler: wire this up to your LLM of choice.
-    public static Task<CreateMessageResult> HandleAsync(
-        CreateMessageRequestParams request,
+    // Matches the Func<CreateMessageRequestParams?, IProgress<ProgressNotificationValue>, CancellationToken, ValueTask<CreateMessageResult>>
+    // expected by McpClientHandlers.SamplingHandler.
+    public static ValueTask<CreateMessageResult> HandleAsync(
+        CreateMessageRequestParams? request,
+        IProgress<ProgressNotificationValue> progress,
         CancellationToken ct)
     {
         Console.WriteLine("\n[Sampling request from server]");
-        Console.WriteLine($"  Max tokens : {request.MaxTokens}");
+        Console.WriteLine($"  Max tokens : {request?.MaxTokens}");
 
-        if (request.SystemPrompt is { } sys)
+        if (request?.SystemPrompt is { } sys)
             Console.WriteLine($"  System     : {sys}");
 
-        foreach (var msg in request.Messages)
+        foreach (var msg in request?.Messages ?? [])
         {
-            Console.WriteLine($"  [{msg.Role}] {msg.Content.Text}");
+            var text = msg.Content is TextContentBlock tb ? tb.Text : "<non-text content>";
+            Console.WriteLine($"  [{msg.Role}] {text}");
         }
 
         // TODO: replace with a real LLM call (e.g. Anthropic SDK, OpenAI SDK, etc.)
         var reply = new CreateMessageResult
         {
             Role = Role.Assistant,
-            Content = new Content { Type = "text", Text = "<your LLM reply here>" },
+            Content = [new TextContentBlock { Text = "<your LLM reply here>" }],
             Model = "stub-model",
-            StopReason = "end_turn",
+            StopReason = CreateMessageResult.StopReasonEndTurn,
         };
 
-        return Task.FromResult(reply);
+        return ValueTask.FromResult(reply);
     }
 }

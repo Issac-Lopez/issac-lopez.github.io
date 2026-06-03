@@ -1,4 +1,5 @@
 using ModelContextProtocol.Client;
+using ModelContextProtocol.Protocol;
 
 namespace McpClientDemo;
 
@@ -47,8 +48,8 @@ static class PromptsFeature
         foreach (var msg in result.Messages)
         {
             Console.WriteLine($"\n[{msg.Role}]");
-            if (msg.Content.Text is { } text)
-                Console.WriteLine(text);
+            if (msg.Content is TextContentBlock tb)
+                Console.WriteLine(tb.Text);
         }
     }
 
